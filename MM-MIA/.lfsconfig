@@ -1,0 +1,11 @@
+# LFS suit automatiquement le remote utilisé pour git push.
+# Avec un remote SSH (git@gitlab.enst.fr:...), LFS s'authentifie via SSH.
+#
+# Pour interdire le push LFS vers le miroir GitHub (compte gratuit, quota 1Gb),
+# ne push jamais avec --all : push toujours vers origin explicitement.
+#   git push origin <branche>     ✅
+#   git push --all                ❌
+#
+# Désactive le locking API (non supportée par GitLab CE).
+[lfs]
+    locksverify = false

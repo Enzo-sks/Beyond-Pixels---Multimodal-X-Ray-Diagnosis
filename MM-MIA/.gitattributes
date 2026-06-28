@@ -1,0 +1,10 @@
+# ============================================================
+# Git LFS retiré : tous les fichiers sont des blobs git normaux.
+# Les gros datasets (train.zip / test.zip) sont gitignorés et gardés
+# en local (voir .gitignore + docs/LFS_WORKFLOW.md).
+# ============================================================
+
+# Normalisation EOL
+* text=auto eol=lf
+*.bat text eol=crlf
+*.sh text eol=lf

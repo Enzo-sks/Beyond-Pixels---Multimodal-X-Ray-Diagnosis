@@ -1,0 +1,121 @@
+# ============================================================
+# Python
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+build/
+dist/
+.eggs/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ============================================================
+# Environnements virtuels (NE JAMAIS COMMITTER)
+# ============================================================
+venv/
+.venv/
+env/
+ENV/
+**/venv/
+**/.venv/
+**/env/
+**/Lib/site-packages/
+**/site-packages/
+**/Scripts/python*
+**/Scripts/pip*
+**/Scripts/activate*
+**/bin/python*
+**/bin/pip*
+**/bin/activate*
+**/pyvenv.cfg
+
+# ============================================================
+# Jupyter / notebooks
+# ============================================================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+profile_default/
+ipython_config.py
+
+# ============================================================
+# Données & modèles (gérés via Git LFS — voir .gitattributes)
+# Les patterns ci-dessous sont gitignored si pas explicitement
+# ajoutés. Les fichiers ajoutés passent automatiquement en LFS.
+# ============================================================
+
+# Caches dérivés (PAS les datasets bruts — eux passent en LFS sous data/)
+data/cache/
+data/interim/
+**/data_cache/
+**/.cache/
+
+# Logs / outputs d'entraînement
+**/lightning_logs/
+**/wandb/
+**/mlruns/
+**/runs/
+**/tb_logs/
+**/tensorboard_logs/
+outputs/
+**/outputs/
+checkpoints/
+**/checkpoints/
+__pycache__/
+# ============================================================
+# IDE / OS / Tools
+# ============================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+.~lock.*
+.claude/
+
+# ============================================================
+# Secrets & configs locales (NE JAMAIS COMMITTER)
+# ============================================================
+.env
+.env.local
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+id_ecdsa*
+**/telecom-paris
+**/telecom-paris.pub
+config.local.*
+secrets/
+
+# Marqueurs cache dirs
+CACHEDIR.TAG
+**/CACHEDIR.TAG
+
+# ============================================================
+# Coverage / tests
+# ============================================================
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+coverage.xml
+*.cover
+
+# Ancien dossier pré-restructuration (contient venv Windows + résidus, à supprimer du disque)
+"image classification (png)/"
+
+# ============================================================
+# Gros datasets sortis de Git LFS — gardés en local uniquement
+# (partage hors git : drive partagé, etc.). Voir docs/LFS_WORKFLOW.md
+# ============================================================
+data/image_classification/train.zip
+data/image_classification/test.zip

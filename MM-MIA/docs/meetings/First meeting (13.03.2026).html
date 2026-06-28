@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1st Meeting Report with Supervisor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+        p {
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>1st Meeting Report with Supervisor</h1>
+
+    <h2>1. Planning</h2>
+    <p>
+        The schedule seems realistic, but some parts need to be clarified. In particular, when training steps are mentioned:
+        the description for the training session and the more practical session is the same, so this part needs to be specified.
+    </p>
+    <p>
+        The schedule had been uploaded to Git and was not necessarily seen by the supervisor, so from now on we should send him
+        directly any information we want to communicate.
+    </p>
+
+    <h2>2. Text</h2>
+    <p>
+        Hugo has made good progress.
+    </p>
+
+    <h2>3. Image</h2>
+    <p>
+        Aziz has made significant progress on the work and on establishing the correspondence between the raw data and the
+        labels/images. We can now actually use the images, and the models can use the data.
+    </p>
+    <p>
+        However, some issues were raised regarding the loss of certain images when attempting to use a method from an existing
+        library designed for medical image analysis. The solution was to switch methods and implement it manually without relying
+        on the library.
+    </p>
+    <p>
+        Enzo developed a model that will need improvement if we want to use it. In particular, the learning rate should be changed,
+        the number of epochs increased, and the overall training time extended. We should also consider setting up three types of
+        datasets: train, test, and eval, instead of only train and eval.
+    </p>
+    <p>
+        Comments were made about the potential interest of fine‑tuning rather than building the model from scratch. However, the
+        approach worked and was still useful — we are perfectly on schedule.
+    </p>
+
+    <h2>4. Dcom</h2>
+    <p>
+        Djouhoud mentioned issues related to the fact that the format of the medical images is very (perhaps too) heavy for our use,
+        even with the Télécom servers (which, in the end, for what we have access to, do not provide a significantly better GPU than
+        Colab).
+    </p>
+    <p>
+        No real solution was found at this stage, except possibly trying to split the images to store them more efficiently.
+    </p>
+
+</body>
+</html>

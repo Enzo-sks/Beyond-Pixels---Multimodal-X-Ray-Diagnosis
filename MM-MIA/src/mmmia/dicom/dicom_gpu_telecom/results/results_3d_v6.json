@@ -1,0 +1,39 @@
+{
+    "model": "r3d_18-Kinetics400-v6",
+    "version": "6.0 - Pretrained Kinetics + 3-Phase Unfreezing + AUC Selection + ASL",
+    "test_accuracy": 0.0,
+    "test_precision": 0.2739154731348738,
+    "test_recall": 0.912630579297246,
+    "test_f1": 0.37766773527439085,
+    "test_auc_roc": 0.5280426066429492,
+    "timestamp": "2026-06-24T21:54:34.799289",
+    "hyperparameters": {
+        "batch_size": 8,
+        "gamma_neg": 4,
+        "gamma_pos": 1,
+        "clip": 0.05,
+        "dropout": 0.3,
+        "optimizer": "AdamW",
+        "scheduler": "CosineAnnealingLR",
+        "unfreezing": "3-phase: head -> layer4 -> layer3"
+    },
+    "optimal_thresholds": {
+        "Atelectasis": 0.3,
+        "Cardiomegaly": 0.35,
+        "Effusion": 0.3,
+        "Pneumonia": 0.3,
+        "Emphysema": 0.3,
+        "Fibrosis": 0.2,
+        "Infiltration": 0.35,
+        "Mass": 0.2,
+        "Nodule": 0.3,
+        "Hernia": 0.25,
+        "Fracture": 0.3,
+        "Opacity": 0.35,
+        "Granuloma": 0.4,
+        "Calcinosis": 0.2,
+        "Scoliosis": 0.3,
+        "Atherosclerosis": 0.3,
+        "Normal": 0.55
+    }
+}

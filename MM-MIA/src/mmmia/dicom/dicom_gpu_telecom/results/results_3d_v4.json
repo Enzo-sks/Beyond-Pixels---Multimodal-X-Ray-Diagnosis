@@ -1,0 +1,17 @@
+{
+    "model": "3D-ResNet18-v4",
+    "version": "4.0 - Optimized hyperparameters + stratified split + AUC metric",
+    "test_accuracy": 0.5520833333333334,
+    "test_precision": 0.21319064966605952,
+    "test_recall": 0.3861566484517304,
+    "test_f1": 0.2747154680260632,
+    "test_auc_roc": 0.5324228226626536,
+    "timestamp": "2026-06-22T18:14:36.692254",
+    "hyperparameters": {
+        "batch_size": 8,
+        "gamma_neg": 2,
+        "gamma_pos": 1,
+        "stratification": "multi-criteria (Normal + pathology count)",
+        "frozen_layers": "layer1 only (layer2 trainable in v4)"
+    }
+}

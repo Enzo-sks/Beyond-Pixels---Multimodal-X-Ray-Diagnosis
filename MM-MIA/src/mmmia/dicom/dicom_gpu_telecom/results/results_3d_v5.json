@@ -1,0 +1,40 @@
+{
+    "model": "MONAI-3D-ResNet18-v5",
+    "version": "5.0 - Progressive Unfreezing + Optimal Thresholds + MedicalNet",
+    "test_accuracy": 0.0078125,
+    "test_precision": 0.266791582846486,
+    "test_recall": 0.8761384335154827,
+    "test_f1": 0.3689939481968041,
+    "test_auc_roc": 0.5234409981763418,
+    "timestamp": "2026-06-22T19:03:35.934454",
+    "hyperparameters": {
+        "batch_size": 8,
+        "gamma_neg": 2,
+        "gamma_pos": 2,
+        "stratification": "multi-criteria (Normal + pathology count)",
+        "unfreezing": "Warmup on FC layer, unfreeze layer3/4 at epoch 5"
+    },
+    "optimal_thresholds": {
+        "Atelectasis": 0.25000000000000006,
+        "Cardiomegaly": 0.20000000000000004,
+        "Effusion": 0.15000000000000002,
+        "Pneumonia": 0.15000000000000002,
+        "Pneumothorax": 0.1,
+        "Edema": 0.1,
+        "Emphysema": 0.15000000000000002,
+        "Fibrosis": 0.15000000000000002,
+        "Infiltration": 0.1,
+        "Mass": 0.5,
+        "Nodule": 0.15000000000000002,
+        "Hernia": 0.20000000000000004,
+        "Fracture": 0.1,
+        "Pleural_Thickening": 0.15000000000000002,
+        "Opacity": 0.20000000000000004,
+        "Consolidation": 0.1,
+        "Granuloma": 0.30000000000000004,
+        "Calcinosis": 0.30000000000000004,
+        "Scoliosis": 0.20000000000000004,
+        "Atherosclerosis": 0.15000000000000002,
+        "Normal": 0.1
+    }
+}

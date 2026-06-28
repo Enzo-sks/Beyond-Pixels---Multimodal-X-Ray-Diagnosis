@@ -1,0 +1,104 @@
+{
+    "Atelectasis": {
+        "true_negative": 4,
+        "false_positive": 701,
+        "false_negative": 0,
+        "true_positive": 63
+    },
+    "Cardiomegaly": {
+        "true_negative": 20,
+        "false_positive": 703,
+        "false_negative": 0,
+        "true_positive": 45
+    },
+    "Effusion": {
+        "true_negative": 3,
+        "false_positive": 733,
+        "false_negative": 0,
+        "true_positive": 32
+    },
+    "Pneumonia": {
+        "true_negative": 658,
+        "false_positive": 92,
+        "false_negative": 15,
+        "true_positive": 3
+    },
+    "Emphysema": {
+        "true_negative": 168,
+        "false_positive": 573,
+        "false_negative": 3,
+        "true_positive": 24
+    },
+    "Fibrosis": {
+        "true_negative": 22,
+        "false_positive": 740,
+        "false_negative": 1,
+        "true_positive": 5
+    },
+    "Infiltration": {
+        "true_negative": 682,
+        "false_positive": 65,
+        "false_negative": 19,
+        "true_positive": 2
+    },
+    "Mass": {
+        "true_negative": 657,
+        "false_positive": 106,
+        "false_negative": 2,
+        "true_positive": 3
+    },
+    "Nodule": {
+        "true_negative": 15,
+        "false_positive": 721,
+        "false_negative": 1,
+        "true_positive": 31
+    },
+    "Hernia": {
+        "true_negative": 85,
+        "false_positive": 668,
+        "false_negative": 1,
+        "true_positive": 14
+    },
+    "Fracture": {
+        "true_negative": 659,
+        "false_positive": 92,
+        "false_negative": 16,
+        "true_positive": 1
+    },
+    "Opacity": {
+        "true_negative": 3,
+        "false_positive": 667,
+        "false_negative": 0,
+        "true_positive": 98
+    },
+    "Granuloma": {
+        "true_negative": 96,
+        "false_positive": 589,
+        "false_negative": 8,
+        "true_positive": 75
+    },
+    "Calcinosis": {
+        "true_negative": 0,
+        "false_positive": 655,
+        "false_negative": 0,
+        "true_positive": 113
+    },
+    "Scoliosis": {
+        "true_negative": 616,
+        "false_positive": 125,
+        "false_negative": 20,
+        "true_positive": 7
+    },
+    "Atherosclerosis": {
+        "true_negative": 39,
+        "false_positive": 702,
+        "false_negative": 2,
+        "true_positive": 25
+    },
+    "Normal": {
+        "true_negative": 3,
+        "false_positive": 341,
+        "false_negative": 4,
+        "true_positive": 420
+    }
+}

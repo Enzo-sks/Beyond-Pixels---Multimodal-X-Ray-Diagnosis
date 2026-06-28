@@ -1,0 +1,51 @@
+[ Image (Ex: 224x224) ]                           [ Texte (Ex: "Poumons clairs...") ]
+                  |                                                    |
+                  v                                                    v
+      +-----------------------+                            +-----------------------+
+      |       ViT             |                            |          BERT         |
+      |   (vit-chest-xray)    |                            |                       |
+      +-----------------------+                            +-----------------------+
+                  |                                                    |
+                  v                                                    v
+           img_features                                          text_features
+           [B, 197, 768]* [B, S_t, 768]**
+                  |                                                    |
+                  |                +-----------------+                 |
+                  |                | Token [CLS] MM  |                 |
+                  |                |   [B, 1, 768]   |                 |
+                  |                +-----------------+                 |
+                  \                        |                          /
+                   \                       v                         /
+                    \------->  FUSION (Concaténation)  <------------/
+                               (dim=1 : Séquence)
+                                           |
+                                           v
+                                   combined_sequence
+                                [B, 1 + 197 + S_t, 768]
+                                           |
+                                           v
+                         +-----------------------------------+
+                         | Multimodal Transformer Encoder    |
+                         | (Self-Attention Image <-> Texte)  |
+                         +-----------------------------------+
+                                           |
+                                           v
+                                  transformer_outputs
+                                [B, 1 + 197 + S_t, 768]
+                                           |
+                                           v
+                             Extraction du token [CLS] global
+                                 (transformer_outputs[:, 0, :])
+                                           |
+                                           v
+                                       cls_output
+                                        [B, 768]
+                                           |
+                                           v
+                                +--------------------+
+                                | Classifier Linear  |
+                                +--------------------+
+                                           |
+                                           v
+                                        logits
+                                        [B, 21]
