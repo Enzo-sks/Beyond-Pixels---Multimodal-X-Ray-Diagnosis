@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Chargement…</title>
+</head>
+<body style="background:#0A0E12;color:white;font-family:sans-serif;padding:40px;">
+  <h2>Chargement de l'exemple…</h2>
+
+  <script>
+    async function load() {
+      const url = new URL(window.location.href);
+      const id = url.searchParams.get("id");
+
+      if (!id) {
+        document.body.innerHTML = "<h3>ID manquant dans l’URL.</h3>";
+        return;
+      }
+
+      // 1) Télécharge l’image
+      const imgResp = await fetch(`https://ton-domaine.com/dataset/${id}.png`);
+      const imgBlob = await imgResp.blob();
+      const imgBase64 = await blobToBase64(imgBlob);
+
+      // 2) Télécharge le texte
+      const txtResp = await fetch(`https://ton-domaine.com/dataset/${id}.txt`);
+      const txt = await txtResp.text();
+
+      // 3) Redirection vers ton site
+      const redirect = 
+        "https://beyondpixels.ai/demo"
+        + "?img=" + encodeURIComponent(imgBase64)
+        + "&txt=" + encodeURIComponent(txt);
+
+      window.location.href = redirect;
+    }
+
+    function blobToBase64(blob) {
+      return new Promise((resolve) => {
+        const reader = new FileReader();
+        reader.onloadend = () => resolve(reader.result.split(",")[1]);
+        reader.readAsDataURL(blob);
+      });
+    }
+
+    load();
+  </script>
+</body>
+</html>
